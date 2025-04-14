@@ -1,51 +1,101 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Arial, sans-serif;
+  background-color: #1eadd1;
   margin: 0;
   padding: 0;
-  height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #74ebd5, #acb6e5);
-}
-
-.container {
-  background: white;
-  padding: 40px 50px;
-  border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  max-width: 400px;
-  width: 90%;
 }
 
 h1 {
-  color: #2c3e50;
-  margin-bottom: 15px;
+  margin-top: 40px;
+  color: #333;
 }
 
-p {
-  margin-bottom: 20px;
-}
 
-.auth-buttons {
+.form-container {
   display: flex;
   justify-content: space-around;
-  gap: 15px;
+  width: 80%;
+  max-width: 800px;
+  margin: 30px 0;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  margin-top: 10px;
-  background-color: #3498db;
+.form-box {
+  width: 45%;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
   color: white;
   border: none;
-  text-decoration: none;
   border-radius: 8px;
-  transition: background-color 0.3s;
+  cursor: pointer;
 }
 
-.btn:hover {
-  background-color: #2980b9;
+button:hover {
+  background-color: #0056b3;
+}
+
+
+.menu-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 200px;
+  margin-top: 50px;
+}
+
+/* Game question layout */
+.question-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.question-block {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.options-grid button {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.options-grid button:hover {
+  background-color: #0056b3;
 }
