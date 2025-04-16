@@ -5,12 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Country Guesser - Menu</title>
   <link rel="stylesheet" href="styles.css" />
+  <script type = "module" src = "firebaseauth.js"></script>
+  <script src="script.js"></script>
 </head>
 <body>
   <h1>Main Menu</h1>
-  <div class="menu-buttons">
-    <button onclick="location.href='game.html'">Start Game</button>
-    <button onclick="alert('Leaderboard coming soon!')">Leaderboard</button>
-  </div>
+  <div class="form-container"> 
+    <h2><center>Guess the Country's Flag</center></h2> 
+    <div class = "button-group">
+      <div class="button-row">
+        <button onclick="startQuiz('Africa')">Africa</button>
+        <button onclick="startQuiz('Asia')">Asia</button>
+      </div>
+      <div class="button-row">
+        <button onclick ="startQuiz('Europe')">Europe</button>
+        <button onclick ="startQuiz('North America')">North America</button>
+        
+      </div>
+      <div class="button-row">
+        <button onclick ="startQuiz('Oceania')">Oceania</button>
+        <button onclick ="startQuiz('South America')"> South America</button>
+        
+      </div>
+      
+      <div class="button-row">
+        <button onclick = "showAllCountries()">ALL COUNTRIES</button>
+        <button onclick="window.location.href = 'leaderboard.html'">LEADERBOARD</button>
+        
+      </div>
+        <button id = "logout">Log Out</button> <!-- this one work -->
+        
+    </div>
+</div>
+<script>
+  function startQuiz(continent) {
+    // save locate then direct to game.html
+    localStorage.setItem('quizcontinent', continent);
+    window.location.href = 'game.html';
+  }
+</script>
 </body>
 </html>

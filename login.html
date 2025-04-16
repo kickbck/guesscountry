@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Country Guesser - Login / Sign Up</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script type="module" src="firebaseauth.js"></script>
+</head>
+<body>
+  <h1>Country Guesser</h1>
+
+  <div class="form-container" id="signIn">
+    <div class = "form-box">
+      <h2><center> Sign In </center></h2>
+      <div id="signInMessage" class="messageDiv" style="display:none;"></div>
+      <form method="post" action="">
+        <input type="email" id="email" placeholder="Email" required/>
+        <input type="password" id="password" placeholder="Password" required/>
+        
+        <button id=submitSignIn>Sign In </button>
+      </form>
+
+      <div class="account-prmpt">
+        <p>Don't Have an Account? |</p>
+        <button id="signUpButton">Sign Up</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-container" id="signUp"  style="display:none;">
+    <div class="form-box">
+      <h2><center>Sign Up</center></h2>
+      <form method="post" action="">
+        <div id="signUpMessage" class="messageDiv" style="display:none;"></div>
+      
+      <input type="email" id="rEmail" placeholder="Email" required/>
+      <input type="password" id="rPassword" placeholder="Password" required/>
+      <input type="text" id= "uName" placeholder="Username" required />
+      <button id=submitSignUp>Sign Up </button>
+      
+    </form>
+    <div class="account-prmpt">
+        <p>Already Have an Account? |</p>
+        <button id="signInButton">Sign In</button>
+      </div>
+    </div>
+  </div>
+  <script src="login.js"></script>
+</body>
+</html>
