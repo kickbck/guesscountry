@@ -48,7 +48,7 @@ function setupLogout() {
             e.preventDefault();
             signOut(auth).then(() => {
                 console.log("User signed out");
-                window.location.href = 'login.html';
+                window.location.href = 'index.html';
             }).catch((error) => {
                 console.error("Logout error:", error);
             });
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const protectedPages = ['menu.html', 'game.html', 'leaderboard.html'];
         
         if (!user && protectedPages.some(page => window.location.pathname.includes(page))) {
-            window.location.href = 'login.html';
+            window.location.href = 'index.html';
         }
         //output for check
         if (user) {
